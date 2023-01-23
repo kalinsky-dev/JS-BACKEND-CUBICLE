@@ -1,6 +1,9 @@
 const fs = require('fs/promises');
-const cubes = require('../db.json');
 const path = require('path');
+
+const cubes = require('../db.json');
+
+exports.getOne = (cubeId) => cubes[cubeId];
 
 exports.save = (cube) => {
   cubes.push(cube);
